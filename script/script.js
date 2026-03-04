@@ -18,19 +18,31 @@ const load_levels=(levels)=>{
 let mother=document.getElementById("vocabulary_sec");
 mother.innerHTML=" ";
 levels.forEach(element => {
-   child=document.createElement('button');
-   child.innerHTML=`<button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Lesson-${element.level_no}</button>`
+   child=document.createElement('div');
+   child.innerHTML=`<button id="lvlbtn_${element.level_no}" class="btn lvl_btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Lesson-${element.level_no}</button>`
 
-  
 
-//    lesson_load
-   child.addEventListener("click",()=>{
 
-    load_word(element.level_no);
-   
-   
-   })
+
+//    lesson_load0
  mother.appendChild(child);
+
+        const btn = document.getElementById(`lvlbtn_${element.level_no}`);
+
+     
+        btn.addEventListener("click", () => {
+
+          
+            document.querySelectorAll(".lvl_btn")
+                    .forEach(b => b.classList.remove("active"));
+
+           
+            btn.classList.add("active");
+
+           
+            load_word(element.level_no);
+
+        });
 
 
 });
