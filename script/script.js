@@ -20,7 +20,7 @@ url.then((response)=>response.json())
 }
 
 
-
+// information
 const display_wordDetail = (id) => {
 
   const detail_container = document.getElementById("my_modal_5");
@@ -30,7 +30,7 @@ const display_wordDetail = (id) => {
 
     <!-- Word -->
     <h2 class="text-3xl font-bold">
-      Eager (<span class="text-gray-700"><i class="fa-solid fa-microphone-lines text-black"></i>: ${id.pronunciation}</span>)
+     ${id.word}(<span class="text-gray-700"><i class="fa-solid fa-microphone-lines text-black"></i>: ${id.pronunciation}</span>)
     </h2>
 
     <!-- Meaning -->
@@ -88,7 +88,7 @@ levels.forEach(element => {
 
 
 
-//    lesson_load0
+//    lesson_load
  mother.appendChild(child);
 
         const btn = document.getElementById(`lvlbtn_${element.level_no}`);
@@ -150,7 +150,7 @@ const load_card=(lessons)=>{
         child.innerHTML=`<h1 class="text-2xl font-bold text-slate-800">${elements.word}</h1>
 
       <p class="text-slate-600 mt-2">Meaning||Pronunciation</p>
-      <p class="bangla text-slate-500 text-2xl ">${elements.meaning}/${elements.pronunciation}</p>
+      <p class="bangla text-slate-500 text-2xl ">${elements.meaning ? elements.meaning:"অর্থ পাওয়া যায়নি" }/${elements.pronunciation? elements.pronunciation:"উচ্চারণ পাওয়া যায়নি" }</p>
 
       <div class="flex justify-between w-full mt-5">
           <button onclick="loadDetail(${elements.id})" class="btn btn-circle btn-sm bg-indigo-100 border-none text-indigo-600 hover:bg-indigo-200">
@@ -199,3 +199,22 @@ card_sec.classList.remove("hidden");
 
 }
 
+
+document.getElementById("search_button").addEventListener("click",()=>{
+let inputWord=document.getElementById("input_word").value.trim().toLowerCase();
+console.log(inputWord);
+
+const url=fetch("https://openapi.programming-hero.com/api/words/all")
+url.then((response)=>response.json())
+.then((data)=>{
+
+  const all_Word=data.data;
+  const filterword=all_Word.filter(findword=>findword.word.toLowerCase().includes(inputWord))
+
+  load_card(filterword);
+});
+
+
+
+
+})
