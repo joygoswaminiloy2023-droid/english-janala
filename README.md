@@ -1,116 +1,133 @@
-# ENGLISH <img width="25px" src="./assets/logo.png" /> JANALA
+# 📘 English Janala
+
+An interactive English Dictionary Web Application built using HTML, CSS, and JavaScript. This project allows users to learn vocabulary by selecting levels, viewing word meanings, pronunciation, examples, and listening to audio pronunciation using the Web Speech API.
 
 ---
 
-## ⚡ API Endpoints
+## 🚀 Live Demo
 
-1. Get ⚡ All Levels
-
-```bash
-https://openapi.programming-hero.com/api/levels/all
-```
-
-1. Get ⚡ Words by Levels <br/>
-   https:// openapi.programming-hero.com/api/level/{id}
-
-```bash
-https://openapi.programming-hero.com/api/level/5
-```
-
-1. Get ⚡ Words Detail <br/>
-   https:// openapi.programming-hero.com/api/word/{id}
-
-```bash
-https://openapi.programming-hero.com/api/word/5
-```
-
-1. Get ⚡ All Words <br/>
-
-```bash
-https://openapi.programming-hero.com/api/words/all
-```
-
-# Work To do
-
-### 1. Show Levels on The UI
-
-- [ ] Show a center-aligned heading as Figma
+[https://your-live-site-link.com](https://joygoswaminiloy2023-droid.github.io/payoo/home.html)
 
 ---
 
-- [ ] Create dynamically generated buttons from **API-01** for each lesson
-- [ ] Lesson Buttons will be displayed on page load
+## 🎯 Project Overview
+
+English Janala is a vocabulary learning web app that helps users improve their English skills. It fetches data from APIs and displays words based on selected lesson levels. Users can view meanings, pronunciation, examples, search words, save favorites, and listen to pronunciation.
+
+This project focuses on API integration, DOM manipulation, search functionality, and interactive UI features.
 
 ---
 
-### 2. Show Word Cards Based on Level
+## ✨ Features
 
-- [ ] Show a default text that will be displayed in the Vocabulary section initially
-- [ ] on Clicking a Specific Lesson Button Load All the words from **API-02**
-- [ ] Display all words for a selected lesson in a card format, showing:
-
-  - [ ] Word
-  - [ ] Word meaning & pronunciation
-  - [ ] Two buttons with relevant icons as per Figma
-
-- [ ] Show **\*No Word Found** message if no words exist for a lesson
-
----
-
-- [ ] Create functionality to highlight the active lesson button
+- Display all lesson levels dynamically from API
+- Load vocabulary words based on selected level
+- Show word meaning, pronunciation, and example sentences
+- Search functionality to find words quickly
+- Save favorite words in a separate section
+- Modal popup for detailed word information
+- Text-to-speech pronunciation using Web Speech API
+- Loading spinner during data fetching
+- Active level button highlighting
+- Proper handling of missing or invalid data
 
 ---
 
-### 3. Use Different Color on The Active Level Button
+## 🌐 API Endpoints
 
-- [ ] After Successfully Loading words of a level , diffirentiate the button so user can understand which button is active
+Get All Levels: https://openapi.programming-hero.com/api/levels/all  
+Get Words by Level: https://openapi.programming-hero.com/api/level/{id}  
+Example: https://openapi.programming-hero.com/api/level/5  
+Get Word Details: https://openapi.programming-hero.com/api/word/{id}  
+Example: https://openapi.programming-hero.com/api/word/5  
+Get All Words: https://openapi.programming-hero.com/api/words/all  
 
-### 4. Vocabulary Details
+---
 
-- [ ] Create functionality to open a modal when clicking the details icon
-- [ ] Data will be load from **API-03**
-- [ ] modal will displays:
-  - [ ] Word with pronunciation
-  - [ ] Example sentence
-  - [ ] Synonyms
-  - [ ] A "Complete Learning" button to close the modal
+## 🔍 Search Functionality
 
-### 5. Handling Invalid Data
+Users can search any word using the search input. The app filters and displays matching results dynamically. When search is active, the selected level button is reset.
 
-- [ ] avoid displaying falsy values like `undefined` or `null`
-- [ ] display relevant words if no data is found
+---
 
-### 6. Loading Spinner
+## ❤️ Save Word Feature
 
-- [ ] Create a loading spinner that will be display when vocabulary is loading from API
+Users can click the heart icon to save words. Saved words are displayed in a separate section for easy revision and practice.
 
-### 7. Implement Search Functionality
+---
 
-- [ ] Take a input Box.
-- [ ] on Changing value It will Search word and show in the UI.
-- [ ] If anyone Do search reset active button
+## 🔊 Pronunciation Feature
 
-### 8. Save Word Feature
+The app uses the Web Speech API to pronounce words when the sound icon is clicked.
 
-- [ ] in the UI of Card add a button `Heart icon`
-- [ ] on Clicking it. Store the Word in the Saved Box
-- [ ] Show Saved words in a Different Section.
-
-### 9. Speak your Vocabularies
-
-- [ ] Create functionality for voice pronunciation of vocabulary words
-- [ ] Use below function and implement on clicking sound icon
-
-```js
 function pronounceWord(word) {
   const utterance = new SpeechSynthesisUtterance(word);
-  utterance.lang = "en-EN"; // English
+  utterance.lang = "en-EN";
   window.speechSynthesis.speak(utterance);
 }
-```
-
-For More >> you can explore this implementation 👉 [https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ](https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ)
 
 ---
-Bonus : How to create Private Repository for next assignments
-## Test Repo - :  https://classroom.github.com/a/Fgjib-lr
+
+## 🎨 UI Features
+
+- Clean vocabulary card layout
+- Responsive design for all devices
+- Active level button highlight
+- Modal popup for word details
+- Loading spinner during API calls
+- Smooth user interaction
+
+---
+
+## 🛠️ Tech Stack
+
+HTML5  
+CSS3  
+JavaScript (Vanilla JS)  
+REST API  
+Web Speech API  
+
+---
+
+## 📱 Responsive Design
+
+Mobile: Single column layout  
+Tablet: Grid layout  
+Desktop: Multi-column vocabulary cards  
+
+---
+
+## 📂 Project Structure
+
+english-janala/
+├── index.html  
+├── style.css  
+├── script/  
+│   ├── app.js  
+│   ├── api.js  
+│   └── utils.js  
+├── assets/  
+└── README.md  
+
+---
+
+## 🚀 What I Learned
+
+Working with REST APIs  
+DOM manipulation using JavaScript  
+Search and filter logic  
+Speech synthesis API  
+UI state management  
+Responsive web design  
+
+---
+
+## 👨‍💻 Author
+
+Made with ❤️ by Joy  
+
+---
+
+## ⭐ Thank You
+
+Thank you for checking out this project. Feel free to explore, fork, and improve it.
