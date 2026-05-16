@@ -6,7 +6,7 @@ An interactive English Dictionary Web Application built using HTML, CSS, and Jav
 
 ## 🚀 Live Demo
 
-https://joygoswaminiloy2023-droid.github.io/english-janala/
+[Explore English Janala Live](https://joygoswaminiloy2023-droid.github.io/english-janala/)
 
 ---
 
@@ -15,6 +15,23 @@ https://joygoswaminiloy2023-droid.github.io/english-janala/
 English Janala is a vocabulary learning web app that helps users improve their English skills. It fetches data from APIs and displays words based on selected lesson levels. Users can view meanings, pronunciation, examples, search words, save favorites, and listen to pronunciation.
 
 This project focuses on API integration, DOM manipulation, search functionality, and interactive UI features.
+
+---
+
+## 📸 Screenshots
+
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <h3>🏠 Home View</h3>
+      <img src="./UI/Home.png" alt="English Janala Home Screen" width="100%">
+    </td>
+    <td width="50%" align="center">
+      <h3>📱 Full View</h3>
+      <img src="./UI/Full.png" alt="English Janala Full Preview" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -35,12 +52,12 @@ This project focuses on API integration, DOM manipulation, search functionality,
 
 ## 🌐 API Endpoints
 
-Get All Levels: https://openapi.programming-hero.com/api/levels/all  
-Get Words by Level: https://openapi.programming-hero.com/api/level/{id}  
-Example: https://openapi.programming-hero.com/api/level/5  
-Get Word Details: https://openapi.programming-hero.com/api/word/{id}  
-Example: https://openapi.programming-hero.com/api/word/5  
-Get All Words: https://openapi.programming-hero.com/api/words/all  
+- **Get All Levels:** `https://openapi.programming-hero.com/api/levels/all`  
+- **Get Words by Level:** `https://openapi.programming-hero.com/api/level/{id}`  
+  - *Example:* `https://openapi.programming-hero.com/api/level/5`  
+- **Get Word Details:** `https://openapi.programming-hero.com/api/word/{id}`  
+  - *Example:* `https://openapi.programming-hero.com/api/word/5`  
+- **Get All Words:** `https://openapi.programming-hero.com/api/words/all`  
 
 ---
 
@@ -60,74 +77,9 @@ Users can click the heart icon to save words. Saved words are displayed in a sep
 
 The app uses the Web Speech API to pronounce words when the sound icon is clicked.
 
+```javascript
 function pronounceWord(word) {
   const utterance = new SpeechSynthesisUtterance(word);
   utterance.lang = "en-EN";
   window.speechSynthesis.speak(utterance);
 }
-
----
-
-## 🎨 UI Features
-
-- Clean vocabulary card layout
-- Responsive design for all devices
-- Active level button highlight
-- Modal popup for word details
-- Loading spinner during API calls
-- Smooth user interaction
-
----
-
-## 🛠️ Tech Stack
-
-HTML5  
-CSS3  
-JavaScript (Vanilla JS)  
-REST API  
-Web Speech API  
-
----
-
-## 📱 Responsive Design
-
-Mobile: Single column layout  
-Tablet: Grid layout  
-Desktop: Multi-column vocabulary cards  
-
----
-
-## 📂 Project Structure
-
-english-janala/
-├── index.html  
-├── style.css  
-├── script/  
-│   ├── app.js  
-│   ├── api.js  
-│   └── utils.js  
-├── assets/  
-└── README.md  
-
----
-
-## 🚀 What I Learned
-
-Working with REST APIs  
-DOM manipulation using JavaScript  
-Search and filter logic  
-Speech synthesis API  
-UI state management  
-Responsive web design  
-
----
-
-## 👨‍💻 Author
-
-Made with ❤️ by Joy  
-
----
-
-## ⭐ Thank You
-
-Thank you for checking out this project. Feel free to explore, fork, and improve it.
